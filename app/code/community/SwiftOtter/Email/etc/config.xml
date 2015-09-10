@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SwiftOtter_Email>
+            <version>0.0.1</version>
+        </SwiftOtter_Email>
+    </modules>
+    <global>
+        <models>
+            <SwiftOtter_Email>
+                <class>SwiftOtter_Email_Model</class>
+                <resourceModel>SwiftOtter_Email_Resource</resourceModel>
+            </SwiftOtter_Email>
+
+            <SwiftOtter_Email_Resource>
+                <class>SwiftOtter_Email_Model_Resource</class>
+                <entities>
+                    <Email>
+                        <table>swiftotter_email</table>
+                    </Email>
+                    <Notification>
+                        <table>swiftotter_email_notification</table>
+                    </Notification>
+                </entities>
+            </SwiftOtter_Email_Resource>
+        </models>
+
+        <blocks>
+            <SwiftOtter_Email>
+                <class>SwiftOtter_Email_Block</class>
+            </SwiftOtter_Email>
+        </blocks>
+        <helpers>
+            <SwiftOtter_Email>
+                <class>SwiftOtter_Email_Helper</class>
+            </SwiftOtter_Email>
+        </helpers>
+
+        <resources>
+            <SwiftOtter_Email>
+                <setup>
+                    <module>SwiftOtter_Email</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </SwiftOtter_Email>
+        </resources>
+
+        <swiftotter_email>
+            <notifications>
+                <temp translate="label">
+                    <label>Sample</label>
+                </temp>
+            </notifications>
+        </swiftotter_email>
+
+        <template>
+            <email>
+                <swiftotter_config_notification_email_template module="SwiftOtter_Email">
+                    <label>SwiftOtter Main Notification Template</label>
+                    <file>swiftotter/email_notification/main.html</file>
+                    <type>html</type>
+                </swiftotter_config_notification_email_template>
+            </email>
+        </template>
+
+        <events>
+            <swiftotter_email_notification_send>
+                <observers>
+                    <SwiftOtter_Email>
+                        <class>SwiftOtter_Email_Model_Observer</class>
+                        <method>swiftotterEmailNotificationSend</method>
+                    </SwiftOtter_Email>
+                </observers>
+            </swiftotter_email_notification_send>
+        </events>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <SwiftOtter_Email before="Mage_Adminhtml">SwiftOtter_Email_Adminhtml</SwiftOtter_Email>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <SwiftOtter_Email>
+                    <file>SwiftOtter/Email.xml</file>
+                </SwiftOtter_Email>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

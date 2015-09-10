@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <swiftotter_email>
+                    <title>Email Notifications</title>
+                    <action>adminhtml/email</action>
+                </swiftotter_email>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <swiftotter_email>
+                                <title>Email Notifications</title>
+                            </swiftotter_email>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

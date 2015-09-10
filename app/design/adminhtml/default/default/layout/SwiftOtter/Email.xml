@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+ 
+<layout>
+    <adminhtml_email_index>
+        <reference name="content">
+            <block type="SwiftOtter_Email/Adminhtml_Email" name="email" />
+        </reference>
+    </adminhtml_email_index>
+ 
+     <adminhtml_email_edit>
+        <reference name="content">
+            <block type="SwiftOtter_Email/Adminhtml_Email_Edit" name="email" />
+        </reference>
+    </adminhtml_email_edit>
+ 
+</layout>
