@@ -3,4 +3,3 @@ app/code/community/SwiftOtter/*                                     app/code/com
 app/design/adminhtml/default/default/layout/SwiftOtter/*        app/design/adminhtml/default/default/layout/SwiftOtter/
 
 app/etc/modules/*                                               app/etc/modules/
-app/etc/locale/en_US/template/email/swiftotter/inventory	app/etc/locale/en_US/template/email/swiftotter/inventory
