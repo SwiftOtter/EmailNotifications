@@ -1,7 +1,6 @@
 {
-    "name": "SwiftOtter/EmailNotifications",
+    "name": "swiftotter/email-notifications",
     "description": "SwiftOtter's base module with helper functions to support other modules.",
-    "version": "1.0.0",
     "type": "magento-module",
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
