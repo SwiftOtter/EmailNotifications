@@ -4,7 +4,7 @@
     "type": "magento-module",
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
-        "SwiftOtter/Base":"*"
+        "swiftotter/base":"*"
     },
     "authors":[
     	{
